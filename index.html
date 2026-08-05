@@ -3,224 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pakalapati Suryavalli - Portfolio</title>
+    <title>Pakalapati Suryavalli | Portfolio</title>
+    
+    <!-- CSS Style Sheets -->
     <link rel="stylesheet" href="style.css">
+    
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Background Grid Effect -->
+    <div class="bg-grid"></div>
+
     <!-- Header / Navbar -->
     <header class="navbar">
-        <div class="logo"><span class="highlight-p">S</span>uryavalli.</div>
+        <a href="#" class="logo"><span class="highlight-p">&lt;S</span>uryavalli /&gt;</a>
+        
         <div class="nav-right">
-            <a href="mailto:Pakalapatisrivalli04@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/pakalapati-suryavalli" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            <span class="theme-icon"><i class="fa-regular fa-sun"></i></span>
-            <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+            <nav class="nav-links" id="nav-links">
+                <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+                <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+                <a href="#projects"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+                <a href="#certifications"><i class="fa-solid fa-certificate"></i> Certificates</a>
+                <a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+            </nav>
+            
+            <div class="action-icons">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="icon-btn menu-icon" id="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <p class="subtitle">Electronics & Communication Engineering Student</p>
-        <h1 class="title">Hi, I'm <span class="highlight-name">Pakalapati Suryavalli</span></h1>
-        <p class="location">From Vizianagaram, Andhra Pradesh</p>
-        
-        <p class="description">
-            Passionate about core engineering, data analytics, and building interactive software applications using Python, C, SQL, and Web Technologies.
-        </p>
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+            <div class="badge-status">
+                <span class="pulsing-dot"></span> Available for Opportunities
+            </div>
+            
+            <p class="subtitle">ECE Student & Technology Enthusiast</p>
+            <h1 class="title">Hi, I'm <span class="highlight-name">Pakalapati Suryavalli</span></h1>
+            <p class="location"><i class="fa-solid fa-location-dot"></i> Vizianagaram, Andhra Pradesh</p>
+            
+            <p class="description">
+                Passionate about core electronics, data analytics, and building modern web applications using Python, C, SQL, and Web Technologies.
+            </p>
 
-        <div class="social-icons">
-            <a href="https://github.com/pakalapati-suryavalli" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:Pakalapatisrivalli04@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <div class="hero-cta">
+                <a href="https://drive.google.com/file/d/1HqSoOmUcTVdGjLZqVE0_Zuyn2oMsYLLO/view?usp=drivesdk" target="_blank" class="btn btn-primary">
+                    <i class="fa-solid fa-file-arrow-down"></i> Download CV
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fa-solid fa-comments"></i> Contact Me
+                </a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://github.com/pakalapati-suryavalli" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:Pakalapatisrivalli04@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
         </div>
 
-        <a href="https://drive.google.com/file/d/1HqSoOmUcTVdGjLZqVE0_Zuyn2oMsYLLO/view?usp=drivesdk" target="_blank" class="btn-cv">Download CV</a>
-
-        <div class="profile-container">
-            <img src="profile.jpg" alt="Pakalapati Suryavalli" class="profile-img" onerror="this.src='https://via.placeholder.com/260'">
+        <div class="profile-container" data-aos="fade-left" data-aos-duration="1000">
+            <div class="profile-glow"></div>
+            <img src="profile.jpg" alt="Pakalapati Suryavalli" class="profile-img" onerror="this.src='https://via.placeholder.com/300'">
         </div>
     </section>
 
-    <!-- About Me Section -->
-    <section class="section">
-        <h2 class="section-title">About Me</h2>
-        <p class="about-text">
-            Electronics and Communication Engineering student with basic knowledge of Python, C, and problem-solving. Hands-on experience in academic projects with a strong willingness to learn new technologies. Seeking an entry-level opportunity to enhance my skills and contribute to organizational growth.
-        </p>
-
-        <h3 class="sub-heading">Hobbies & Interests</h3>
-        <ul class="bullet-list">
-            <li>Coding & Logic Building</li>
-            <li>Listening to Music</li>
-            <li>Learning New Technologies</li>
-        </ul>
-        <p class="location-pin"><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Vizianagaram, Andhra Pradesh</p>
+    <!-- About Section -->
+    <section class="section" id="about" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="section-title"><span class="title-icon"><i class="fa-solid fa-user-gear"></i></span> About Me</h2>
+        <div class="card glass-card">
+            <p class="about-text">
+                Electronics and Communication Engineering student at <strong>Raghu Engineering College</strong> (2023 – 2027) with continuous hands-on experience in C, Python, and web development. Passionate about applying analytical and problem-solving skills to real-world technical challenges.
+            </p>
+            <hr class="divider">
+            <h4 class="sub-heading"><i class="fa-solid fa-heart"></i> Hobbies & Interests</h4>
+            <div class="hobbies-tags">
+                <span class="hobby-tag"><i class="fa-solid fa-code"></i> Coding & Logic Building</span>
+                <span class="hobby-tag"><i class="fa-solid fa-music"></i> Listening to Music</span>
+                <span class="hobby-tag"><i class="fa-solid fa-microchip"></i> Exploring New Tech</span>
+            </div>
+        </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="section">
-        <h2 class="section-title">Skills 🛠️</h2>
+    <section class="section" id="skills" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="section-title"><span class="title-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span> Technical Skills</h2>
         
-        <!-- Programming Languages -->
-        <div class="card">
-            <h3 class="card-title"><i class="fa-solid fa-code"></i> Programming Languages</h3>
-            <div class="badge-group">
-                <span class="badge">C</span>
-                <span class="badge">Python</span>
-                <span class="badge">SQL</span>
+        <div class="cards-grid">
+            <div class="card glass-card hover-glow" data-aos="zoom-in" data-aos-delay="100">
+                <h3 class="card-title"><i class="fa-solid fa-code"></i> Languages</h3>
+                <div class="badge-group">
+                    <span class="badge"><i class="fa-brands fa-c"></i> C Language</span>
+                    <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="badge"><i class="fa-solid fa-database"></i> SQL</span>
+                </div>
             </div>
-        </div>
 
-        <!-- Databases & Web technologies -->
-        <div class="card">
-            <h3 class="card-title"><i class="fa-solid fa-database"></i> Databases & Web Technologies</h3>
-            <div class="badge-group">
-                <span class="badge">SQLite</span>
-                <span class="badge">HTML</span>
-                <span class="badge">CSS</span>
+            <div class="card glass-card hover-glow" data-aos="zoom-in" data-aos-delay="200">
+                <h3 class="card-title"><i class="fa-solid fa-globe"></i> Web & Database</h3>
+                <div class="badge-group">
+                    <span class="badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+                    <span class="badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                    <span class="badge"><i class="fa-solid fa-server"></i> SQLite</span>
+                </div>
             </div>
-        </div>
 
-        <!-- Frameworks & Libraries -->
-        <div class="card">
-            <h3 class="card-title"><i class="fa-solid fa-cubes"></i> Frameworks & Libraries</h3>
-            <div class="badge-group">
-                <span class="badge">Flask</span>
-                <span class="badge">Streamlit</span>
-                <span class="badge">OpenCV</span>
-                <span class="badge">Pandas</span>
-                <span class="badge">Matplotlib</span>
-                <span class="badge">Tkinter</span>
+            <div class="card glass-card hover-glow" data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="card-title"><i class="fa-solid fa-cubes"></i> Libraries & Frameworks</h3>
+                <div class="badge-group">
+                    <span class="badge">Flask</span>
+                    <span class="badge">Streamlit</span>
+                    <span class="badge">OpenCV</span>
+                    <span class="badge">Pandas</span>
+                    <span class="badge">Matplotlib</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="section">
-        <h2 class="section-title">Projects 🚀</h2>
-
-        <!-- Project 1 -->
-        <div class="card">
-            <h3 class="card-title">Doctor Appointment System <span class="emoji">🩺</span></h3>
-            <p class="card-text">A full-featured web platform allowing patients to browse schedules and seamlessly book appointments with doctors online.</p>
-            <div class="btn-group">
-                <a href="https://github.com/pakalapati-suryavalli/doctor-appointment-booking-system" target="_blank" class="btn-project">View on GitHub &rarr;</a>
-                <a href="https://doctor-appointment-booking-system-kd7t.onrender.com" target="_blank" class="btn-project btn-pink">Live Demo &rarr;</a>
+    <section class="section" id="projects" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="section-title"><span class="title-icon"><i class="fa-solid fa-diagram-project"></i></span> Featured Projects</h2>
+        
+        <div class="cards-grid">
+            <div class="card glass-card project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-header">
+                    <i class="fa-solid fa-user-doctor project-icon"></i>
+                    <h3 class="card-title">Doctor Appointment System</h3>
+                </div>
+                <p class="card-text">Full-stack web application allowing patients to search doctor availability and schedule appointments online smoothly.</p>
+                <div class="btn-group">
+                    <a href="https://github.com/pakalapati-suryavalli/doctor-appointment-booking-system" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://doctor-appointment-booking-system-kd7t.onrender.com" target="_blank" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Project 2 -->
-        <div class="card">
-            <h3 class="card-title">Smart Expense Tracker <span class="emoji">💡</span></h3>
-            <p class="card-text">An intuitive web application for managing daily finances, tracking income/expenses, and calculating monthly budgets.</p>
-            <div class="btn-group">
-                <a href="https://github.com/pakalapati-suryavalli/Smart_Expense_tracker" target="_blank" class="btn-project">View on GitHub &rarr;</a>
-                <a href="https://smart-expense-tracker-pk7w.onrender.com" target="_blank" class="btn-project btn-pink">Live Demo &rarr;</a>
+            <div class="card glass-card project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-header">
+                    <i class="fa-solid fa-wallet project-icon"></i>
+                    <h3 class="card-title">Smart Expense Tracker</h3>
+                </div>
+                <p class="card-text">Intuitive finance platform for logging daily transactions, categorizing income & expenses, and tracking monthly budgets.</p>
+                <div class="btn-group">
+                    <a href="https://github.com/pakalapati-suryavalli/Smart_Expense_tracker" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://smart-expense-tracker-pk7w.onrender.com" target="_blank" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="card">
-            <h3 class="card-title">Face Recognition Attendance System <span class="emoji">🤖</span></h3>
-            <p class="card-text">An automated attendance system leveraging OpenCV and facial recognition logic to log attendance in real time.</p>
-            <div class="btn-group">
-                <a href="https://github.com/pakalapati-suryavalli/Face-Recognition-Attendance-System" target="_blank" class="btn-project">View on GitHub &rarr;</a>
+            <div class="card glass-card project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-header">
+                    <i class="fa-solid fa-id-badge project-icon"></i>
+                    <h3 class="card-title">Face Recognition Attendance</h3>
+                </div>
+                <p class="card-text">Computer vision project built with OpenCV to capture video feeds, match facial embeddings, and record real-time attendance.</p>
+                <div class="btn-group">
+                    <a href="https://github.com/pakalapati-suryavalli/Face-Recognition-Attendance-System" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Certifications Section -->
-    <section class="section">
-        <h2 class="section-title">Certifications 🎓</h2>
+    <section class="section" id="certifications" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="section-title"><span class="title-icon"><i class="fa-solid fa-award"></i></span> Certifications</h2>
+        
+        <div class="cards-grid">
+            <a href="https://drive.google.com/file/d/1__Ykwmfu9V7t8qpqyRY_yG-KewnVO6Jf/view?usp=drivesdk" target="_blank" class="card-link">
+                <div class="card glass-card cert-card">
+                    <i class="fa-solid fa-graduation-cap cert-icon"></i>
+                    <div>
+                        <h4>Python Fundamentals</h4>
+                        <p class="cert-issuer">Infosys Springboard</p>
+                    </div>
+                </div>
+            </a>
 
-        <a href="https://drive.google.com/file/d/1__Ykwmfu9V7t8qpqyRY_yG-KewnVO6Jf/view?usp=drivesdk" target="_blank" class="card-link">
-            <div class="card clickable-card">
-                <p><i class="fa-solid fa-book"></i> Python Fundamentals - Infosys Springboard &rarr;</p>
-            </div>
-        </a>
+            <a href="https://drive.google.com/file/d/1vLGF6wwyqH43pkL8uh0SWx1QchWFkk2A/view?usp=drivesdk" target="_blank" class="card-link">
+                <div class="card glass-card cert-card">
+                    <i class="fa-solid fa-atom cert-icon"></i>
+                    <div>
+                        <h4>Quantum Fundamentals</h4>
+                        <p class="cert-issuer">Professional Certificate</p>
+                    </div>
+                </div>
+            </a>
 
-        <a href="https://drive.google.com/file/d/1vLGF6wwyqH43pkL8uh0SWx1QchWFkk2A/view?usp=drivesdk" target="_blank" class="card-link">
-            <div class="card clickable-card">
-                <p><i class="fa-solid fa-trophy"></i> Quantum Fundamentals &rarr;</p>
-            </div>
-        </a>
-
-        <a href="https://drive.google.com/file/d/1Fz_yltU5Q40qagazKBt5IXIJXKpXBdL8/view?usp=drivesdk" target="_blank" class="card-link">
-            <div class="card clickable-card">
-                <p><i class="fa-solid fa-chart-line"></i> Data Analytics Job Simulation - Deloitte &rarr;</p>
-            </div>
-        </a>
+            <a href="https://drive.google.com/file/d/1Fz_yltU5Q40qagazKBt5IXIJXKpXBdL8/view?usp=drivesdk" target="_blank" class="card-link">
+                <div class="card glass-card cert-card">
+                    <i class="fa-solid fa-chart-pie cert-icon"></i>
+                    <div>
+                        <h4>Data Analytics Job Simulation</h4>
+                        <p class="cert-issuer">Deloitte</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="section">
-        <h2 class="section-title">Education 📚</h2>
-
-        <div class="card">
-            <h3 class="card-title">B.Tech in Electronics & Communication Engineering</h3>
-            <p class="organization">Raghu Engineering College</p>
-            <p class="year">(2023 – 2027)</p>
-        </div>
-    </section>
-
-    <!-- Contact Form & Links -->
-    <section class="section" id="contact">
-        <div class="card">
-            <form action="#">
-                <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <label>Your Email</label>
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <label>Your Message</label>
-                    <textarea placeholder="Your Message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Submit</button>
-            </form>
-        </div>
-
-        <h2 class="section-title" style="margin-top: 40px;">Contact Me</h2>
-
-        <div class="card icon-card">
-            <i class="fa-solid fa-envelope icon"></i>
-            <div>
-                <h4 class="card-title">Email</h4>
-                <p>Pakalapatisrivalli04@gmail.com</p>
+    <!-- Contact Section -->
+    <section class="section" id="contact" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="section-title"><span class="title-icon"><i class="fa-solid fa-paper-plane"></i></span> Contact Me</h2>
+        
+        <div class="contact-grid">
+            <div class="card glass-card">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="Write your message here..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
             </div>
-        </div>
 
-        <div class="card icon-card">
-            <i class="fa-brands fa-linkedin icon"></i>
-            <div>
-                <h4 class="card-title">LinkedIn</h4>
-                <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank" style="color: #64748b; text-decoration: none;">Connect with me</a>
-            </div>
-        </div>
+            <div class="contact-details">
+                <div class="card glass-card contact-info-card">
+                    <i class="fa-solid fa-envelope contact-icon"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>Pakalapatisrivalli04@gmail.com</p>
+                    </div>
+                </div>
 
-        <div class="card icon-card">
-            <i class="fa-brands fa-github icon"></i>
-            <div>
-                <h4 class="card-title">GitHub</h4>
-                <a href="https://github.com/pakalapati-suryavalli" target="_blank" style="color: #64748b; text-decoration: none;">Check my work</a>
+                <div class="card glass-card contact-info-card">
+                    <i class="fa-brands fa-linkedin contact-icon"></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank">Connect on LinkedIn &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="card glass-card contact-info-card">
+                    <i class="fa-brands fa-github contact-icon"></i>
+                    <div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/pakalapati-suryavalli" target="_blank">Explore Repositories &rarr;</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Pakalapati Suryavalli. All rights reserved.</p>
+        <p>© 2026 Pakalapati Suryavalli. Built with passion & precision.</p>
     </footer>
 
-    <!-- Floating Resume Button -->
-    <a href="https://drive.google.com/file/d/1HqSoOmUcTVdGjLZqVE0_Zuyn2oMsYLLO/view?usp=drivesdk" target="_blank" class="floating-resume"><i class="fa-solid fa-arrow-down"></i> Resume</a>
-
+    <!-- AOS JS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
