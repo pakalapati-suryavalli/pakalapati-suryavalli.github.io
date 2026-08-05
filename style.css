@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #000000;
-    color: #ffffff;
+    background: #0b0f19;
+    color: #e2e8f0;
     padding: 0 20px;
     max-width: 500px;
     margin: 0 auto;
@@ -20,37 +20,38 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    border-bottom: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1e293b;
 }
 
 .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .highlight-p {
-    color: #ff0055;
+    color: #00f0ff;
 }
 
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .nav-right a, .nav-right span {
-    color: #ffffff;
+    color: #94a3b8;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: 0.3s;
+    font-size: 1.15rem;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-right a:hover {
-    color: #ff0055;
+    color: #00f0ff;
+    transform: translateY(-2px);
 }
 
 .nav-right .theme-icon {
-    color: #ffcc00;
+    color: #f59e0b;
     cursor: pointer;
 }
 
@@ -61,8 +62,11 @@ body {
 }
 
 .subtitle {
-    color: #cccccc;
-    font-size: 1.05rem;
+    color: #38bdf8;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
@@ -73,19 +77,21 @@ body {
 }
 
 .highlight-name {
-    color: #ff0055;
+    background: linear-gradient(135deg, #00f0ff, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .location {
-    color: #888888;
+    color: #64748b;
     font-size: 0.95rem;
     margin-bottom: 20px;
 }
 
 .description {
-    color: #bbbbbb;
+    color: #94a3b8;
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 25px;
 }
 
@@ -97,8 +103,8 @@ body {
 }
 
 .social-icons a {
-    background: #1a1a1a;
-    color: #ffffff;
+    background: #1e293b;
+    color: #e2e8f0;
     width: 42px;
     height: 42px;
     border-radius: 50%;
@@ -107,24 +113,33 @@ body {
     justify-content: center;
     text-decoration: none;
     font-size: 1.1rem;
-    border: 1px solid #333;
-    transition: 0.3s;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-    border-color: #ff0055;
-    color: #ff0055;
+    border-color: #00f0ff;
+    color: #00f0ff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    transform: translateY(-3px);
 }
 
 .btn-cv {
     display: inline-block;
-    background-color: #ff0055;
+    background: linear-gradient(135deg, #0284c7, #2563eb);
     color: #ffffff;
-    padding: 12px 24px;
+    padding: 12px 26px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     margin-bottom: 35px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-cv:hover {
+    box-shadow: 0 6px 20px rgba(0, 240, 255, 0.4);
+    transform: translateY(-2px);
 }
 
 .profile-container {
@@ -134,11 +149,19 @@ body {
 }
 
 .profile-img {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ff0055;
+    border: 3px solid #00f0ff;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.25);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
 }
 
 /* Sections */
@@ -147,24 +170,26 @@ body {
 }
 
 .section-title {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin-bottom: 20px;
     font-weight: 700;
+    color: #f8fafc;
 }
 
 .sub-heading {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin: 20px 0 10px 0;
+    color: #38bdf8;
 }
 
 .about-text {
-    color: #cccccc;
+    color: #94a3b8;
     line-height: 1.6;
     font-size: 0.95rem;
 }
 
 .bullet-list {
-    color: #cccccc;
+    color: #94a3b8;
     padding-left: 20px;
     line-height: 1.6;
     font-size: 0.95rem;
@@ -172,17 +197,24 @@ body {
 
 .location-pin {
     margin-top: 15px;
-    color: #ffffff;
+    color: #cbd5e1;
     font-size: 0.95rem;
 }
 
 /* Cards */
 .card {
-    background-color: #121212;
-    border: 1px solid #222222;
+    background-color: #111827;
+    border: 1px solid #1e293b;
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .card-link {
@@ -191,26 +223,26 @@ body {
 }
 
 .card-title {
-    color: #ff0055;
+    color: #38bdf8;
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
 .card-text {
-    color: #bbbbbb;
+    color: #94a3b8;
     font-size: 0.9rem;
     margin-bottom: 15px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .organization {
-    color: #dddddd;
+    color: #cbd5e1;
     font-size: 0.95rem;
     margin-bottom: 5px;
 }
 
 .year {
-    color: #888888;
+    color: #64748b;
     font-size: 0.9rem;
 }
 
@@ -223,12 +255,19 @@ body {
 }
 
 .badge {
-    background-color: #1c1c1c;
-    color: #dddddd;
+    background-color: #1e293b;
+    color: #38bdf8;
     padding: 6px 14px;
     border-radius: 6px;
     font-size: 0.85rem;
-    border: 1px solid #2e2e2e;
+    border: 1px solid #334155;
+    transition: all 0.2s ease;
+}
+
+.badge:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+    border-color: #38bdf8;
 }
 
 /* Buttons inside cards */
@@ -240,29 +279,44 @@ body {
 
 .btn-project {
     display: inline-block;
-    background-color: #ff0055;
-    color: #ffffff;
+    background: #1e293b;
+    color: #38bdf8;
     padding: 8px 16px;
     border-radius: 6px;
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+}
+
+.btn-project:hover {
+    background: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
 }
 
 .btn-pink {
-    background-color: #ff0055;
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-pink:hover {
+    box-shadow: 0 0 15px rgba(2, 132, 199, 0.4);
 }
 
 .clickable-card {
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .clickable-card:hover {
-    border-color: #ff0055;
+    border-color: #00f0ff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
 }
 
 .clickable-card p {
-    color: #dddddd;
+    color: #e2e8f0;
     font-size: 0.95rem;
 }
 
@@ -273,7 +327,7 @@ body {
 
 .form-group label {
     display: block;
-    color: #ffffff;
+    color: #cbd5e1;
     font-size: 0.9rem;
     margin-bottom: 5px;
 }
@@ -281,22 +335,33 @@ body {
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
-    background-color: #1e1e1e;
-    border: 1px solid #333333;
+    background-color: #1e293b;
+    border: 1px solid #334155;
     border-radius: 6px;
     color: #ffffff;
     font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #00f0ff;
 }
 
 .btn-submit {
     width: 100%;
-    background-color: #ff0055;
+    background: linear-gradient(135deg, #0284c7, #2563eb);
     color: white;
     padding: 12px;
     border: none;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
 }
 
 /* Contact Icons Cards */
@@ -308,14 +373,14 @@ body {
 
 .icon-card .icon {
     font-size: 1.5rem;
-    color: #ff0055;
+    color: #00f0ff;
 }
 
 /* Footer & Floating Resume */
 footer {
     text-align: center;
     padding: 30px 0 80px 0;
-    color: #666666;
+    color: #64748b;
     font-size: 0.85rem;
 }
 
@@ -323,13 +388,19 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ff0055;
+    background: linear-gradient(135deg, #0284c7, #2563eb);
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(255, 0, 85, 0.5);
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
     font-size: 0.9rem;
     z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.floating-resume:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 240, 255, 0.5);
 }
