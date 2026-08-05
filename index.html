@@ -1,99 +1,226 @@
-<section class="about" id="about">
-    <p class="section-eyebrow"># about</p>
-    <h2 class="section-title">About Me</h2>
-    <div class="about-grid">
-      <p class="about-text">
-        Electronics and Communication Engineering student at Raghu Engineering College, Visakhapatnam (2023–2027), currently holding a CGPA of 8.36.
-        I work mainly with Python — building practical, end-to-end tools like appointment systems, expense trackers, and resume analyzers using Flask, Streamlit, and SQLite.
-        My ECE background gives me a solid grip on logic and systems thinking, which I bring into every project I build.
-      </p>
-      <div class="about-stats">
-        <div class="stat"><span class="stat-num">8.36</span><span class="stat-label">CGPA</span></div>
-        <div class="stat"><span class="stat-num">2+</span><span class="stat-label">Deployed Apps</span></div>
-        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Certifications</span></div>
-      </div>
-    </div>
-  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakalapati Suryavalli - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-  <section class="skills" id="skills">
-    <p class="section-eyebrow"># skills</p>
-    <h2 class="section-title">Technical Skills</h2>
-
-    <div class="skill-group">
-      <h3 class="skill-cat">Languages</h3>
-      <div class="chip-row">
-        <span class="chip">$ python</span>
-        <span class="chip">$ c</span>
-        <span class="chip">$ sql</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <h3 class="skill-cat">Databases & Web</h3>
-      <div class="chip-row">
-        <span class="chip">$ sqlite</span>
-        <span class="chip">$ html</span>
-        <span class="chip">$ css</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <h3 class="skill-cat">Frameworks & Libraries</h3>
-      <div class="chip-row">
-        <span class="chip">$ flask</span>
-        <span class="chip">$ streamlit</span>
-        <span class="chip">$ opencv</span>
-        <span class="chip">$ pandas</span>
-        <span class="chip">$ matplotlib</span>
-        <span class="chip">$ tkinter</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="projects" id="projects">
-    <p class="section-eyebrow"># projects</p>
-    <h2 class="section-title">Featured Work</h2>
-
-    <div class="project-grid">
-      <div class="project-card">
-        <div class="project-top">
-          <h3>Doctor Appointment Booking System</h3>
-          <span class="status-live">Live</span>
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo"><span class="highlight-p">S</span>uryavalli.</div>
+        <div class="nav-right">
+            <a href="mailto:Pakalapatisrivalli04@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/pakalapati-suryavalli" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <span class="theme-icon"><i class="fa-regular fa-sun"></i></span>
+            <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
         </div>
-        <p class="project-desc">Role-based appointment booking system with token-based queuing for doctors, admins, and patients. Deployed on Render, enabling real-time booking without patient account creation.</p>
-        <div class="chip-row small">
-          <span class="chip">$ flask</span>
-          <span class="chip">$ sqlite</span>
-          <span class="chip">$ python</span>
-        </div>
-        <a href="https://doctor-appointment-booking-system-kd7t.onrender.com" target="_blank" class="project-link">View Project →</a>
-      </div>
+    </header>
 
-      <div class="project-card">
-        <div class="project-top">
-          <h3>Smart Expense Tracker</h3>
-          <span class="status-live">Live</span>
-        </div>
-        <p class="project-desc">Interactive expense tracking app with category filtering, pie/bar chart visualizations, and persistent SQLite storage. Deployed on Render with optimized dependencies.</p>
-        <div class="chip-row small">
-          <span class="chip">$ streamlit</span>
-          <span class="chip">$ pandas</span>
-          <span class="chip">$ matplotlib</span>
-        </div>
-        <a href="https://smart-expense-tracker-pk7w.onrender.com" target="_blank" class="project-link">View Project →</a>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <p class="subtitle">Electronics & Communication Engineering Student</p>
+        <h1 class="title">Hi, I'm <span class="highlight-name">Pakalapati Suryavalli</span></h1>
+        <p class="location">From Visakhapatnam, Andhra Pradesh</p>
+        
+        <p class="description">
+            Passionate about core engineering, data analytics, and building interactive software applications using Python, C, SQL, and Web Technologies.
+        </p>
 
-      <div class="project-card">
-        <div class="project-top">
-          <h3>AI Resume Analyzer</h3>
-          <span class="status-soon">Coming Soon</span>
+        <div class="social-icons">
+            <a href="https://github.com/pakalapati-suryavalli" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:Pakalapatisrivalli04@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <p class="project-desc">Analyzes resumes for skill detection and ATS-style scoring using NLP techniques, with PDF text extraction.</p>
-        <div class="chip-row small">
-          <span class="chip">$ streamlit</span>
-          <span class="chip">$ spacy</span>
-          <span class="chip">$ sklearn</span>
+
+        <a href="https://drive.google.com/file/d/1HqSoOmUcTVdGjLZqVE0_Zuyn2oMsYLLO/view?usp=drivesdk" target="_blank" class="btn-cv">Download CV</a>
+
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Pakalapati Suryavalli" class="profile-img" onerror="this.src='https://via.placeholder.com/260'">
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            Electronics and Communication Engineering student with basic knowledge of Python, C, and problem-solving. Hands-on experience in academic projects with a strong willingness to learn new technologies. Seeking an entry-level opportunity to enhance my skills and contribute to organizational growth.
+        </p>
+
+        <h3 class="sub-heading">Hobbies & Interests</h3>
+        <ul class="bullet-list">
+            <li>Building Python GUI and Web Applications</li>
+            <li>Practicing competitive programming and problem-solving</li>
+            <li>Exploring Data Analytics and Computer Vision (OpenCV)</li>
+        </ul>
+        <p class="location-pin"><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Visakhapatnam, Andhra Pradesh</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section">
+        <h2 class="section-title">Skills 🛠️</h2>
+        
+        <!-- Programming Languages -->
+        <div class="card">
+            <h3 class="card-title"><i class="fa-solid fa-code"></i> Programming Languages</h3>
+            <div class="badge-group">
+                <span class="badge">C</span>
+                <span class="badge">Python</span>
+                <span class="badge">SQL</span>
+            </div>
+        </div>
+
+        <!-- Databases & Web technologies -->
+        <div class="card">
+            <h3 class="card-title"><i class="fa-solid fa-database"></i> Databases & Web Technologies</h3>
+            <div class="badge-group">
+                <span class="badge">SQLite</span>
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+            </div>
+        </div>
+
+        <!-- Frameworks & Libraries -->
+        <div class="card">
+            <h3 class="card-title"><i class="fa-solid fa-cubes"></i> Frameworks & Libraries</h3>
+            <div class="badge-group">
+                <span class="badge">Flask</span>
+                <span class="badge">Streamlit</span>
+                <span class="badge">OpenCV</span>
+                <span class="badge">Pandas</span>
+                <span class="badge">Matplotlib</span>
+                <span class="badge">Tkinter</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <h2 class="section-title">Projects 🚀</h2>
+
+        <!-- Project 1 -->
+        <div class="card">
+            <h3 class="card-title">Doctor Appointment System <span class="emoji">🩺</span></h3>
+            <p class="card-text">A full-featured web platform allowing patients to browse schedules and seamlessly book appointments with doctors online.</p>
+            <div class="btn-group">
+                <a href="https://github.com/pakalapati-suryavalli/doctor-appointment-booking-system" target="_blank" class="btn-project">View on GitHub &rarr;</a>
+                <a href="https://doctor-appointment-booking-system-kd7t.onrender.com" target="_blank" class="btn-project btn-pink">Live Demo &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card">
+            <h3 class="card-title">Smart Expense Tracker <span class="emoji">💡</span></h3>
+            <p class="card-text">An intuitive web application for managing daily finances, tracking income/expenses, and calculating monthly budgets.</p>
+            <div class="btn-group">
+                <a href="https://github.com/pakalapati-suryavalli/Smart_Expense_tracker" target="_blank" class="btn-project">View on GitHub &rarr;</a>
+                <a href="https://smart-expense-tracker-pk7w.onrender.com" target="_blank" class="btn-project btn-pink">Live Demo &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card">
+            <h3 class="card-title">Face Recognition Attendance System <span class="emoji">🤖</span></h3>
+            <p class="card-text">An automated attendance system leveraging OpenCV and facial recognition logic to log attendance in real time.</p>
+            <div class="btn-group">
+                <a href="https://github.com/pakalapati-suryavalli/Face-Recognition-Attendance-System" target="_blank" class="btn-project">View on GitHub &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section">
+        <h2 class="section-title">Certifications 🎓</h2>
+
+        <a href="https://drive.google.com/file/d/1__Ykwmfu9V7t8qpqyRY_yG-KewnVO6Jf/view?usp=drivesdk" target="_blank" class="card-link">
+            <div class="card clickable-card">
+                <p><i class="fa-solid fa-book"></i> Python Fundamentals - Infosys Springboard &rarr;</p>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1vLGF6wwyqH43pkL8uh0SWx1QchWFkk2A/view?usp=drivesdk" target="_blank" class="card-link">
+            <div class="card clickable-card">
+                <p><i class="fa-solid fa-trophy"></i> Quantum Fundamentals &rarr;</p>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1Fz_yltU5Q40qagazKBt5IXIJXKpXBdL8/view?usp=drivesdk" target="_blank" class="card-link">
+            <div class="card clickable-card">
+                <p><i class="fa-solid fa-chart-line"></i> Data Analytics Job Simulation - Deloitte &rarr;</p>
+            </div>
+        </a>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section">
+        <h2 class="section-title">Education 📚</h2>
+
+        <div class="card">
+            <h3 class="card-title">B.Tech in Electronics & Communication Engineering</h3>
+            <p class="organization">Raghu Engineering College</p>
+            <p class="year">(2023 – 2027)</p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Links -->
+    <section class="section" id="contact">
+        <div class="card">
+            <form action="#">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 40px;">Contact Me</h2>
+
+        <div class="card icon-card">
+            <i class="fa-solid fa-envelope icon"></i>
+            <div>
+                <h4 class="card-title">Email</h4>
+                <p>Pakalapatisrivalli04@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="card icon-card">
+            <i class="fa-brands fa-linkedin icon"></i>
+            <div>
+                <h4 class="card-title">LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank" style="color: #bbb; text-decoration: none;">Connect with me</a>
+            </div>
+        </div>
+
+        <div class="card icon-card">
+            <i class="fa-brands fa-github icon"></i>
+            <div>
+                <h4 class="card-title">GitHub</h4>
+                <a href="https://github.com/pakalapati-suryavalli" target="_blank" style="color: #bbb; text-decoration: none;">Check my work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Pakalapati Suryavalli. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating Resume Button -->
+    <a href="https://drive.google.com/file/d/1HqSoOmUcTVdGjLZqVE0_Zuyn2oMsYLLO/view?usp=drivesdk" target="_blank" class="floating-resume"><i class="fa-solid fa-arrow-down"></i> Resume</a>
+
+</body>
+</html>
