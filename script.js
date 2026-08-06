@@ -2,12 +2,51 @@
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         once: true,
-        duration: 800,
+        duration: 900,
         easing: 'ease-out-cubic'
     });
+
+    // Dynamic Typing Effect in Subtitle Header
+    const subtitleEl = document.querySelector('.subtitle');
+    if (subtitleEl) {
+        const roles = [
+            "ECE Student & Tech Enthusiast",
+            "Python & Web Developer",
+            "Data Analytics Learner"
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+            if (isDeleting) {
+                subtitleEl.innerHTML = currentRole.substring(0, charIndex - 1) + '<span class="typed-text"></span>';
+                charIndex--;
+            } else {
+                subtitleEl.innerHTML = currentRole.substring(0, charIndex + 1) + '<span class="typed-text"></span>';
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2200; // Pause at full word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 400;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        typeEffect();
+    }
 });
 
-// Theme Toggle Functionality (Dark / Light Mode)
+// Theme Toggle Functionality
 const themeToggleBtn = document.getElementById('theme-toggle');
 const themeIcon = themeToggleBtn.querySelector('i');
 
@@ -31,7 +70,6 @@ menuToggleBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// Close mobile menu when a nav link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -47,7 +85,6 @@ if (contactForm) {
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
 
-        // Visual feedback during sending
         submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
         submitBtn.disabled = true;
 
@@ -66,12 +103,11 @@ if (contactForm) {
                 alert('Thank you! Your message has been sent successfully to Suryavalli.');
                 contactForm.reset();
             } else {
-                alert('Oops! Something went wrong while sending your message. Please try again.');
+                alert('Oops! Something went wrong while sending your message.');
             }
         } catch (error) {
             alert('Error connecting to the server. Please check your network connection.');
         } finally {
-            // Restore button state
             submitBtn.innerHTML = originalBtnText;
             submitBtn.disabled = false;
         }
