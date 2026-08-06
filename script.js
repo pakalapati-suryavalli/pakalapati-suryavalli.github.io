@@ -38,12 +38,42 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Simple Contact Form submission alert prevent default
+// Asynchronous Web3Forms Contact Form Submission
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        alert('Thank you! Your message has been received.');
-        contactForm.reset();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+
+        // Visual feedback during sending
+        submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                alert('Thank you! Your message has been sent successfully to Suryavalli.');
+                contactForm.reset();
+            } else {
+                alert('Oops! Something went wrong while sending your message. Please try again.');
+            }
+        } catch (error) {
+            alert('Error connecting to the server. Please check your network connection.');
+        } finally {
+            // Restore button state
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+        }
     });
 }
