@@ -26,6 +26,7 @@
         <div class="nav-right">
             <nav class="nav-links" id="nav-links">
                 <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+                <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
                 <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
                 <a href="#projects"><i class="fa-solid fa-laptop-code"></i> Projects</a>
                 <a href="#certifications"><i class="fa-solid fa-certificate"></i> Certificates</a>
@@ -96,6 +97,52 @@
         </div>
     </section>
 
+    <!-- Work Experience & Internships Section -->
+    <section class="section" id="experience" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="section-title"><span class="title-icon"><i class="fa-solid fa-briefcase"></i></span> Work Experience & Internships</h2>
+        
+        <div class="cards-grid exp-grid">
+            <!-- Experience Card 1 -->
+            <div class="card glass-card exp-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="card-title">Java Developer Intern</h3>
+                        <span class="company-tag">Internship Studio</span>
+                    </div>
+                    <span class="status-badge">Completed</span>
+                </div>
+                <p class="card-text">Gained comprehensive practical training in Core Java programming, Object-Oriented System design, and application logic building.</p>
+                
+                <div class="btn-group cert-links">
+                    <a href="https://drive.google.com/file/d/1IqLYX4H5KaDQuI2Q2EeGOUWBlMwGpkAH/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                        <i class="fa-solid fa-graduation-cap"></i> Training Certificate
+                    </a>
+                    <a href="https://drive.google.com/file/d/1x4IAQd0hCRIwz8TuR4Tofo2VDIZIKrqH/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-primary">
+                        <i class="fa-solid fa-certificate"></i> Completion Certificate
+                    </a>
+                </div>
+            </div>
+
+            <!-- Experience Card 2 -->
+            <div class="card glass-card exp-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="card-title">Python Full Stack Developer Intern</h3>
+                        <span class="company-tag">EduSkills</span>
+                    </div>
+                    <span class="status-badge">Completed</span>
+                </div>
+                <p class="card-text">Focused on Full Stack Web Architecture using Python, database management, and building user-centric interfaces.</p>
+                
+                <div class="btn-group cert-links">
+                    <a href="https://drive.google.com/file/d/1RG5nhvpRHEnVxPus3bLrM9_rPAhokV_E/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-primary">
+                        <i class="fa-solid fa-certificate"></i> Completion Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section class="section" id="skills" data-aos="fade-up" data-aos-duration="800">
         <h2 class="section-title"><span class="title-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span> Technical Skills</h2>
@@ -106,6 +153,7 @@
                 <div class="badge-group">
                     <span class="badge"><i class="fa-brands fa-c"></i> C Language</span>
                     <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="badge"><i class="fa-brands fa-java"></i> Java</span>
                     <span class="badge"><i class="fa-solid fa-database"></i> SQL</span>
                 </div>
             </div>
@@ -216,48 +264,59 @@
         <h2 class="section-title"><span class="title-icon"><i class="fa-solid fa-paper-plane"></i></span> Contact Me</h2>
         
         <div class="contact-grid">
+            <!-- Web3Forms Contact Form -->
             <div class="card glass-card">
-                <form id="contact-form">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    
                     <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" placeholder="John Doe" required>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
                     </div>
                     <div class="form-group">
-                        <label>Your Email</label>
-                        <input type="email" placeholder="name@example.com" required>
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="name@example.com" required>
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea placeholder="Write your message here..." rows="4" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="4" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
 
+            <!-- Direct Social & Email Links -->
             <div class="contact-details">
-                <div class="card glass-card contact-info-card">
-                    <i class="fa-solid fa-envelope contact-icon"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p>Pakalapatisrivalli04@gmail.com</p>
+                <a href="mailto:Pakalapatisrivalli04@gmail.com" class="card-link">
+                    <div class="card glass-card contact-info-card hover-glow">
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Pakalapatisrivalli04@gmail.com</p>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card glass-card contact-info-card">
-                    <i class="fa-brands fa-linkedin contact-icon"></i>
-                    <div>
-                        <h4>LinkedIn</h4>
-                        <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank">Connect on LinkedIn &rarr;</a>
+                <a href="https://www.linkedin.com/in/pakalapati-suryavalli-084062386" target="_blank" class="card-link">
+                    <div class="card glass-card contact-info-card hover-glow">
+                        <i class="fa-brands fa-linkedin contact-icon"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>Connect on LinkedIn &rarr;</p>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card glass-card contact-info-card">
-                    <i class="fa-brands fa-github contact-icon"></i>
-                    <div>
-                        <h4>GitHub</h4>
-                        <a href="https://github.com/pakalapati-suryavalli" target="_blank">Explore Repositories &rarr;</a>
+                <a href="https://github.com/pakalapati-suryavalli" target="_blank" class="card-link">
+                    <div class="card glass-card contact-info-card hover-glow">
+                        <i class="fa-brands fa-github contact-icon"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>Explore Repositories &rarr;</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
