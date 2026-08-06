@@ -379,6 +379,49 @@ body {
     gap: 20px;
 }
 
+/* Work Experience & Internships Styling */
+.exp-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.exp-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.company-tag {
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: block;
+    margin-top: 4px;
+}
+
+.status-badge {
+    background: rgba(0, 240, 255, 0.1);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.cert-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 /* Badges */
 .badge-group {
     display: flex;
@@ -427,6 +470,8 @@ body {
 /* Certifications */
 .card-link {
     text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .cert-card {
@@ -494,6 +539,12 @@ body {
     display: flex;
     align-items: center;
     gap: 18px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateX(6px);
+    border-color: var(--accent);
 }
 
 .contact-icon {
@@ -501,13 +552,12 @@ body {
     color: var(--accent);
 }
 
-.contact-info-card a {
+.contact-info-card p {
     color: var(--text-muted);
-    text-decoration: none;
     font-size: 0.9rem;
 }
 
-.contact-info-card a:hover {
+.contact-info-card:hover p {
     color: var(--accent);
 }
 
