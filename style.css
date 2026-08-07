@@ -1,30 +1,49 @@
-/* Modern UI Color Palette */
+/* ==========================================
+   Modern & Professional UI Color Palette 
+   ========================================== */
 :root {
-    --bg-color: #0b0f19;
-    --card-bg: rgba(18, 26, 43, 0.75);
-    --card-border: rgba(255, 255, 255, 0.08);
+    /* Dark Theme (Default) */
+    --bg-color: #090d16;
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --card-border: rgba(255, 255, 255, 0.1);
     --text-primary: #f8fafc;
     --text-muted: #94a3b8;
-    --accent-cyan: #00f0ff;
-    --accent-purple: #7000ff;
-    --glow-cyan: rgba(0, 240, 255, 0.35);
-    --glow-purple: rgba(112, 0, 255, 0.35);
-    --btn-gradient: linear-gradient(135deg, #00f0ff, #7000ff);
+    
+    /* Sleek Vibrant Accents */
+    --accent-cyan: #06b6d4;
+    --accent-purple: #8b5cf6;
+    --glow-cyan: rgba(6, 182, 212, 0.25);
+    --glow-purple: rgba(139, 92, 246, 0.25);
+    
+    /* Soft Gradient Accent */
+    --btn-gradient: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
+    --hover-gradient: linear-gradient(135deg, #0891b2 0%, #7c3aed 100%);
+    
+    /* Form Inputs Background */
+    --input-bg: rgba(15, 23, 42, 0.6);
 }
 
 .light-mode {
+    /* Clean Light Theme */
     --bg-color: #f8fafc;
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --card-border: rgba(0, 0, 0, 0.08);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(15, 23, 42, 0.08);
     --text-primary: #0f172a;
     --text-muted: #475569;
+    
+    /* Vibrant Light Accents */
     --accent-cyan: #0284c7;
     --accent-purple: #6366f1;
-    --glow-cyan: rgba(2, 132, 199, 0.25);
-    --glow-purple: rgba(99, 102, 241, 0.25);
-    --btn-gradient: linear-gradient(135deg, #0284c7, #6366f1);
+    --glow-cyan: rgba(2, 132, 199, 0.15);
+    --glow-purple: rgba(99, 102, 241, 0.15);
+    
+    --btn-gradient: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
+    --hover-gradient: linear-gradient(135deg, #0369a1 0%, #4f46e5 100%);
+    
+    --input-bg: rgba(241, 245, 249, 0.8);
 }
 
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +63,7 @@ body {
     margin: 0 auto;
 }
 
-/* Dynamic Animated Background Grid */
+/* Background Grid Overlay */
 .bg-grid {
     position: fixed;
     top: 0;
@@ -52,10 +71,10 @@ body {
     width: 100vw;
     height: 100vh;
     background-image: 
-        radial-gradient(circle at 15% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 85% 80%, rgba(112, 0, 255, 0.08) 0%, transparent 40%),
-        radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
-    background-size: 100% 100%, 100% 100%, 30px 30px;
+        radial-gradient(circle at 15% 20%, var(--glow-cyan) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, var(--glow-purple) 0%, transparent 45%),
+        radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+    background-size: 100% 100%, 100% 100%, 32px 32px;
     pointer-events: none;
     z-index: -1;
 }
@@ -68,14 +87,15 @@ body {
     padding: 20px 0;
     position: sticky;
     top: 0;
-    background: rgba(11, 15, 25, 0.85);
+    background: var(--bg-color);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     z-index: 1000;
     border-bottom: 1px solid var(--card-border);
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--text-primary);
     text-decoration: none;
@@ -84,7 +104,7 @@ body {
 }
 
 .logo:hover {
-    transform: scale(1.03);
+    transform: translateY(-1px);
 }
 
 .highlight-p {
@@ -99,13 +119,13 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 24px;
 }
 
 .nav-links a {
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 500;
     position: relative;
     padding: 4px 0;
@@ -115,17 +135,17 @@ body {
 .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 0%;
     height: 2px;
     background: var(--btn-gradient);
-    transition: width 0.3s ease;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 2px;
 }
 
 .nav-links a:hover {
-    color: var(--accent-cyan);
+    color: var(--text-primary);
 }
 
 .nav-links a:hover::after {
@@ -141,22 +161,22 @@ body {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     color: var(--text-primary);
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-btn:hover {
     border-color: var(--accent-cyan);
     color: var(--accent-cyan);
-    transform: rotate(15deg) scale(1.08);
-    box-shadow: 0 0 15px var(--glow-cyan);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--glow-cyan);
 }
 
 .menu-icon {
@@ -168,7 +188,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    padding: 70px 0;
+    padding: 80px 0;
     gap: 40px;
 }
 
@@ -187,15 +207,14 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(0, 240, 255, 0.08);
+    background: var(--glow-cyan);
     border: 1px solid var(--accent-cyan);
     color: var(--accent-cyan);
-    padding: 6px 16px;
+    padding: 6px 14px;
     border-radius: 30px;
     font-size: 0.8rem;
     font-weight: 600;
     margin-bottom: 20px;
-    box-shadow: 0 0 12px var(--glow-cyan);
 }
 
 .pulsing-dot {
@@ -207,21 +226,21 @@ body {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.8); }
-    70% { box-shadow: 0 0 0 10px rgba(0, 240, 255, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 240, 255, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(6, 182, 212, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
 }
 
 .subtitle {
     color: var(--accent-cyan);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    font-size: 0.82rem;
+    margin-bottom: 8px;
 }
 
-/* Typing Dynamic Text Accent */
+/* Dynamic Typing Text Accent */
 .typed-text {
     border-right: 2px solid var(--accent-cyan);
     padding-right: 4px;
@@ -234,10 +253,11 @@ body {
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 2.8rem;
     line-height: 1.15;
     margin-bottom: 12px;
     font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 .highlight-name {
@@ -256,44 +276,44 @@ body {
 .description {
     color: var(--text-muted);
     font-size: 1.05rem;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 }
 
 .hero-cta {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .social-icons {
     display: flex;
-    gap: 14px;
+    gap: 12px;
 }
 
 .social-icons a {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     color: var(--text-primary);
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons a:hover {
     border-color: var(--accent-cyan);
     color: var(--accent-cyan);
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 20px var(--glow-cyan);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px var(--glow-cyan);
 }
 
-/* Advanced Floating Profile Glow */
+/* Profile Glow & Floating Effect */
 .profile-container {
     position: relative;
     display: flex;
@@ -301,8 +321,8 @@ body {
 }
 
 .profile-img {
-    width: 290px;
-    height: 290px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid transparent;
@@ -314,31 +334,31 @@ body {
 
 .profile-glow {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 290px;
+    height: 290px;
     border-radius: 50%;
     background: var(--btn-gradient);
-    filter: blur(50px);
-    opacity: 0.35;
+    filter: blur(45px);
+    opacity: 0.25;
     z-index: 1;
     animation: float 5s ease-in-out infinite;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-12px) rotate(1deg); }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
-/* Modern Glowing Buttons */
+/* Glowing Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 13px 26px;
-    border-radius: 12px;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 10px;
     font-weight: 600;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border: none;
@@ -351,8 +371,9 @@ body {
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 25px var(--glow-cyan), 0 0 20px var(--glow-purple);
+    background: var(--hover-gradient);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--glow-cyan);
 }
 
 .btn-secondary {
@@ -364,8 +385,8 @@ body {
 .btn-secondary:hover {
     border-color: var(--accent-cyan);
     color: var(--accent-cyan);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px var(--glow-cyan);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--glow-cyan);
 }
 
 .btn-outline {
@@ -381,7 +402,7 @@ body {
 }
 
 .btn-sm {
-    padding: 9px 18px;
+    padding: 8px 16px;
     font-size: 0.85rem;
 }
 
@@ -390,17 +411,18 @@ body {
     justify-content: center;
 }
 
-/* Glassmorphic Cards Grid & Hover Micro-Animations */
+/* Glassmorphic Cards & Grid */
 .section {
     padding: 60px 0;
 }
 
 .section-title {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    font-weight: 700;
 }
 
 .title-icon {
@@ -411,26 +433,27 @@ body {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     backdrop-filter: blur(14px);
-    border-radius: 20px;
-    padding: 26px;
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 16px;
+    padding: 24px;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-glow:hover {
     border-color: var(--accent-cyan);
-    transform: translateY(-6px) scale(1.01);
-    box-shadow: 0 12px 30px var(--glow-cyan);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px var(--glow-cyan);
 }
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
 }
 
-/* Work Experience & Internships Styling */
+/* Experience Section */
 .exp-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 }
 
 .exp-card {
@@ -441,8 +464,8 @@ body {
 
 .exp-card:hover {
     border-color: var(--accent-purple);
-    box-shadow: 0 10px 30px var(--glow-purple);
-    transform: translateY(-6px);
+    box-shadow: 0 8px 25px var(--glow-purple);
+    transform: translateY(-4px);
 }
 
 .exp-header {
@@ -454,26 +477,26 @@ body {
 
 .company-tag {
     color: var(--accent-cyan);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 600;
     display: block;
     margin-top: 4px;
 }
 
 .status-badge {
-    background: rgba(112, 0, 255, 0.12);
-    color: #a855f7;
-    border: 1px solid rgba(168, 85, 247, 0.4);
-    padding: 4px 12px;
+    background: rgba(139, 92, 246, 0.12);
+    color: var(--accent-purple);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    padding: 4px 10px;
     border-radius: 20px;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 600;
 }
 
 .cert-links {
-    margin-top: 22px;
+    margin-top: 20px;
     display: flex;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -481,28 +504,28 @@ body {
 .badge-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     margin-top: 15px;
 }
 
 .badge {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--card-border);
     color: var(--text-primary);
-    padding: 7px 16px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     transition: all 0.3s ease;
 }
 
 .badge:hover {
     border-color: var(--accent-cyan);
     color: var(--accent-cyan);
-    background: rgba(0, 240, 255, 0.08);
-    transform: translateY(-2px);
+    background: var(--glow-cyan);
+    transform: translateY(-1px);
 }
 
 /* Project Cards */
@@ -514,26 +537,26 @@ body {
 
 .project-card:hover {
     border-color: var(--accent-cyan);
-    box-shadow: 0 12px 35px var(--glow-cyan);
-    transform: translateY(-6px);
+    box-shadow: 0 8px 25px var(--glow-cyan);
+    transform: translateY(-4px);
 }
 
 .project-header {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 14px;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .project-icon {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--accent-cyan);
 }
 
 .btn-group {
     display: flex;
-    gap: 12px;
-    margin-top: 22px;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 /* Certifications */
@@ -546,30 +569,30 @@ body {
 .cert-card {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
 }
 
 .cert-card:hover {
     border-color: var(--accent-cyan);
-    transform: translateX(6px);
-    box-shadow: 0 8px 25px var(--glow-cyan);
+    transform: translateX(4px);
+    box-shadow: 0 6px 20px var(--glow-cyan);
 }
 
 .cert-icon {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--accent-cyan);
 }
 
 .cert-issuer {
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
 }
 
 /* Contact Grid */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 20px;
 }
 
 @media (min-width: 768px) {
@@ -579,71 +602,71 @@ body {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .form-group label {
     display: block;
     color: var(--text-muted);
-    font-size: 0.85rem;
-    margin-bottom: 8px;
+    font-size: 0.82rem;
+    margin-bottom: 6px;
 }
 
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 14px;
-    background: rgba(0, 0, 0, 0.25);
+    padding: 12px 14px;
+    background: var(--input-bg);
     border: 1px solid var(--card-border);
-    border-radius: 12px;
+    border-radius: 10px;
     color: var(--text-primary);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     transition: all 0.3s ease;
 }
 
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-cyan);
-    box-shadow: 0 0 15px var(--glow-cyan);
+    box-shadow: 0 0 12px var(--glow-cyan);
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
 }
 
 .contact-info-card {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 16px;
     transition: all 0.3s ease;
 }
 
 .contact-info-card:hover {
-    transform: translateX(8px);
+    transform: translateX(4px);
     border-color: var(--accent-cyan);
-    box-shadow: 0 8px 25px var(--glow-cyan);
+    box-shadow: 0 6px 20px var(--glow-cyan);
 }
 
 .contact-icon {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--accent-cyan);
 }
 
 .hobbies-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 15px;
+    gap: 10px;
+    margin-top: 12px;
 }
 
 .hobby-tag {
-    background: rgba(0, 240, 255, 0.05);
+    background: rgba(6, 182, 212, 0.05);
     border: 1px solid var(--card-border);
     color: var(--text-primary);
-    padding: 8px 18px;
-    border-radius: 10px;
-    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.88rem;
     transition: all 0.3s ease;
 }
 
@@ -655,14 +678,14 @@ body {
 .divider {
     border: none;
     border-top: 1px solid var(--card-border);
-    margin: 25px 0;
+    margin: 20px 0;
 }
 
 footer {
     text-align: center;
-    padding: 40px 0;
+    padding: 30px 0;
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     border-top: 1px solid var(--card-border);
 }
 
@@ -681,13 +704,12 @@ footer {
         border: 1px solid var(--card-border);
         flex-direction: column;
         padding: 20px;
-        border-radius: 16px;
+        border-radius: 12px;
         width: 220px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     }
 
     .nav-links.active {
         display: flex;
     }
 }
-
