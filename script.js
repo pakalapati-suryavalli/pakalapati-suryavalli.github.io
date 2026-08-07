@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 900,
         easing: 'ease-out-cubic'
     });
-
+    
     // Dynamic Typing Effect in Subtitle Header
     const subtitleEl = document.querySelector('.subtitle');
     if (subtitleEl) {
